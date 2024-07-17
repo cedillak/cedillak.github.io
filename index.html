@@ -297,14 +297,19 @@
         setInterval(fetchJoke, 60000); // 60000 milliseconds = 1 minute
     });
     </script>
-    <script>
-    // Script for Weatherbit API 
+    <!-- Script for Weatherbit API -->
+<script>
     const apiKey = '91a95c851bdc4bc9a22ee51c37b15b2a';
     const apiUrl = `https://api.weatherbit.io/v2.0/current?key=${apiKey}`;
 
     // Fetch data from Weatherbit API
     fetch(apiUrl)
-        .then(response => response.json())
+        .then(response => {
+            if (!response.ok) {
+                throw new Error('Network response was not ok');
+            }
+            return response.json();
+        })
         .then(data => {
             // Example: Assuming the API returns an icon URL for weather
             const weatherIconUrl = data.data[0].weather.icon;
@@ -321,5 +326,6 @@
             weatherGraphicContainer.innerHTML = '<p>Failed to fetch weather data</p>';
         });
 </script>
+
 </body>
 </html>
