@@ -246,7 +246,7 @@
                     
                     <!-- Integrate the jokeAPI (https://v2.jokeapi.dev/joke/AnyLinks to an external site., similar to Lab 2.2.d.i) with Any category of joke to display a new joke in your page every 1 minute. -->
                     <li>
-                        <h3 class="mb-0">Joke of the Day</h3>
+                        <h3 class="mb-0">A random programming joke for every minute</h3>
                         <p id="joke-of-the-day"></p>
                     </li>
                     <!-- Integrate a public API with graphics and display that graphic/image in your page. -->
@@ -288,7 +288,7 @@
         function fetchJoke() {
             $.get("https://v2.jokeapi.dev/joke/Programming?type=single", function(result) {
                 console.log("From jokeAPI: " + JSON.stringify(result));
-                $("#joke-of-the-day").html("A programming joke of the day: " + result.joke);
+                $("#joke-of-the-day").html("A random programming joke: " + result.joke);
             });
         }
         // Fetch a joke initially when the page loads
