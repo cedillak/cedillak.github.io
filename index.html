@@ -224,12 +224,12 @@
         <section class="resume-section" id="Additional Tasks">
             <div class="resume-section-content">
                 <h2 class="mb-5">Additional Tasks</h2>
-                <ul class="fa-ul mb-0">
+                <ul class="fa-ul mb-4">
                     <!-- ADD PAGE TRACKER HERE -->
-                    <h3 class="mb-4">Page Tracker</h3>
+                    <h3 class="mb-0">Page Tracker</h3>
           <a href="https://info.flagcounter.com/0sYk"><img src="https://s01.flagcounter.com/count2/0sYk/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_4/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
                     <!-- WAPH.HTML PAGE LINK -->
-                    <h3 class="mb-4">Link to "Web Application Programming and Hacking" course</h3>
+                    <h3 class="mb-0">Link to "Web Application Programming and Hacking" course</h3>
                     <li>
                         <span class="fa-li"><i class="fas fa-link"></i></span>
                         <a href="waph.html" target="_blank">Click Here to Access the Course Information</a>
@@ -243,13 +243,13 @@
                     
                     <!-- Two public Web APIs integration (20 pts)​ Ensure you include a disclaimer stating that the public/third-party services generate the generated contents below and that you are not responsible. -->
                     <p>DISCLAIMER: public/third-party services generate the generated contents below. I am not responsible for the accuracy or reliability of the information provided by these services.</p>
-                    <div id= "google_translate_element"></div>   
-                    <!-- Integrate the jokeAPI (https://v2.jokeapi.dev/joke/AnyLinks to an external site., similar to Lab 2.2.d.i) with Any category of joke to display a new joke in your page every 1 minute. -->
+
+                    <!-- 1. Integrate the jokeAPI-->
                     <li>
-                        <h3 class="mb-4">A random programming joke for every minute</h3>
+                        <h3 class="mb-0">A random programming joke for every minute</h3>
                         <p id="joke-of-the-day"></p>
                     </li>
-                    <!-- Integrate a public API with graphics and display that graphic/image in your page. -->
+                    <!-- 2. Integrate a public API with graphics and display that graphic/image in your page. -->
                     <div id="weather-graphic-container"></div>
                 </ul>
             </div>
@@ -321,14 +321,5 @@
             weatherGraphicContainer.innerHTML = '<p>Failed to fetch weather data</p>';
         });
 </script>
-<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
-    <script>
-        function googleTranslateElementInit(){
-            new.google.translate.TranslateElement(
-                {pageLanguage: 'en'},
-                'google_translate_element'
-            );
-        }
-    </script>
 </body>
 </html>
