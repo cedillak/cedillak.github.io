@@ -62,9 +62,6 @@
             <a class="social-icon" href="https://www.linkedin.com/in/ana-k-cedillo"><i class="fab fa-linkedin-in"></i></a>
             <a class="social-icon" href="https://github.com/akcedillo"><i class="fab fa-github"></i></a>
         </div>
-         <!-- ADD PAGE TRACKER HERE -->
-        <p>test</p>
-          <a href="https://info.flagcounter.com/0sYk"><img src="https://s01.flagcounter.com/count2/0sYk/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_4/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
     </div>
 </section>
         <hr class="m-0" />
@@ -229,13 +226,20 @@
                 <h2 class="mb-5">Additional Tasks</h2>
                 <ul class="fa-ul mb-0">
                     <!-- ADD PAGE TRACKER HERE -->
-    
+                    <h3 class="mb-0">Page Tracker</h3>
+          <a href="https://info.flagcounter.com/0sYk"><img src="https://s01.flagcounter.com/count2/0sYk/bg_FFFFFF/txt_000000/border_CCCCCC/columns_2/maxflags_4/viewers_0/labels_0/pageviews_1/flags_0/percent_0/" alt="Flag Counter" border="0"></a>
                     <!-- WAPH.HTML PAGE LINK -->
+                    <h3 class="mb-0">Link to "Web Application Programming and Hacking" course</h3>
                     <li>
                         <span class="fa-li"><i class="fas fa-link"></i></span>
                         <a href="waph.html" target="_blank">Click Here to Access the Course Information</a>
                     </li>
-                    <!-- Use jQuery and one more open-source JavaScript framework/library​ to implement JavaScript code introduced in Lab 2, including a digital clock, an analog clock, show/hide your email, and one more functionality of your choice. -->
+                    <!-- digital clock and analog clock -->
+                    <h3 class="mb-0">Digital Clock</h3>
+                        <div id="digitalClock"></div>
+                    <h3 class="mb-0">Analog Clock</h3>
+                <canvas id="analogClock" width="150" height="150"></canvas>
+                    <!-- one more functionality of your choice. -->
                     
                     <!-- Two public Web APIs integration (20 pts)​ Ensure you include a disclaimer stating that the public/third-party services generate the generated contents below and that you are not responsible. -->
                     
@@ -252,5 +256,58 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
     <!-- Core theme JS-->
     <script src="js/scripts.js"></script>
+     <!-- Script for digital and analog clocks -->
+    <script>
+        // Digital Clock
+        function updateDigitalClock() {
+            const now = new Date();
+            const hours = now.getHours().toString().padStart(2, '0');
+            const minutes = now.getMinutes().toString().padStart(2, '0');
+            const seconds = now.getSeconds().toString().padStart(2, '0');
+            document.getElementById('digitalClock').innerText = `${hours}:${minutes}:${seconds}`;
+        }
+        setInterval(updateDigitalClock, 1000);
+
+        // Analog Clock
+        function drawClock() {
+            const now = new Date();
+            const ctx = document.getElementById('analogClock').getContext('2d');
+            const radius = 70;
+            ctx.clearRect(0, 0, 150, 150);
+
+            ctx.beginPath();
+            ctx.arc(75, 75, radius, 0, 2 * Math.PI);
+            ctx.fillStyle = 'white';
+            ctx.fill();
+
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            ctx.lineTo(75 + radius * Math.cos((now.getSeconds() * 6 - 90) * Math.PI / 180), 75 + radius * Math.sin((now.getSeconds() * 6 - 90) * Math.PI / 180));
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 2;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            ctx.lineTo(75 + radius * 0.8 * Math.cos((now.getMinutes() * 6 - 90) * Math.PI / 180), 75 + radius * 0.8 * Math.sin((now.getMinutes() * 6 - 90) * Math.PI / 180));
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 4;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.moveTo(75, 75);
+            ctx.lineTo(75 + radius * 0.6 * Math.cos((now.getHours() % 12 * 30 + now.getMinutes() / 2 - 90) * Math.PI / 180), 75 + radius * 0.6 * Math.sin((now.getHours() % 12 * 30 + now.getMinutes() / 2 - 90) * Math.PI / 180));
+            ctx.strokeStyle = '#333';
+            ctx.lineWidth = 6;
+            ctx.stroke();
+
+            ctx.beginPath();
+            ctx.arc(75, 75, 5, 0, 2 * Math.PI);
+            ctx.fillStyle = '#333';
+            ctx.fill();
+        }
+        setInterval(drawClock, 1000);
+    </script>
+    
 </body>
 </html>
