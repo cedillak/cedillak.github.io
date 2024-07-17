@@ -1,174 +1,184 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>WAPH-Ana Cedillo</title>
-    <style type="text/css">
-    .button {
-        background-color: #4CAF50;/* Green*/
-        border: none;
-        color: white;
-        padding: 5px;
-        text-align: center;
-        text-decoration: none;
-        display: inline-block;
-        font-size: 12px;
-        margin: 4px 2px;
-        cursor: pointer;
-    }
-    .round {border-radius:8px;}
-    #response {background-color: #ff9800;} /* Orange*/
-    </style>
-    <link rel="stylesheet" type="text/css" href="https://waph-uc.github.io/style1.css">
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
-</head>
-<body>
-<div class="container wrapper">
-    <div id="top">	
-      <h1>Web Application Programming and Hacking</h1>
-      <h2>Front-end Web Development Lab</h2> 
-      <h3>Instructor: Dr. Phu Phung</h3>
-    </div>
-    <div class="wrapper">
-        <div id="menubar">
-          <h3>Student: Ana Cedillo</h3>
-          <div id="email" onclick="showhideEmail()">Show my email</div>
-          <script type="text/javascript" src="email.js"></script>
-          <img src="images/headshot.jpg" alt="My headshot" width="50">
-          <div id="digit-clock"></div>
-          <canvas id="analog-clock" width="150" height="150" style="background-color:#999"></canvas>
-          <script src="https://waph-uc.github.io/clock.js"></script>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Resume - Start Bootstrap Theme</title>
+        <link rel="icon" type="image/x-icon" href="assets/img/favicon.ico" />
+        <!-- Font Awesome icons (free version)-->
+        <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
+        <!-- Google fonts-->
+        <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet" type="text/css" />
+        <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet" type="text/css" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body id="page-top">
+        <!-- Navigation-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+            <a class="navbar-brand js-scroll-trigger" href="#page-top">
+                <span class="d-block d-lg-none">Ana Cedillo</span>
+                <span class="d-none d-lg-block"><img class="img-fluid img-profile rounded-circle mx-auto mb-2" src="assets/img/profile.jpg" alt="..." /></span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarResponsive">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#interests">Interests</a></li>
+                    <li class="nav-item"><a class="nav-link js-scroll-trigger" href="#awards">Awards</a></li>
+                </ul>
+            </div>
+        </nav>
+        <!-- Page Content-->
+        <div class="container-fluid p-0">
+            <!-- About-->
+            <section class="resume-section" id="about">
+                <div class="resume-section-content">
+                    <h1 class="mb-0">
+                        Ana K.
+                        <span class="text-primary">Cedillo</span>
+                    </h1>
+                    <div class="subheading mb-5">
+                        3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
+                        <a href="mailto:cedillak@mail.uc.edu">cedillak@mail.uc.edu</a>
+                    </div>
+                    <p class="lead mb-5">Experienced in leveraging agile frameworks to provide a robust synopsis for high-level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
+                    <div class="social-icons">
+                        <a class="social-icon" href="www.linkedin.com/in/ana-k-cedillo"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-icon" href="https://github.com/akcedillo"><i class="fab fa-github"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-twitter"></i></a>
+                        <a class="social-icon" href="#!"><i class="fab fa-facebook-f"></i></a>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Experience-->
+            <section class="resume-section" id="experience">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Experience</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Chess Instructor</h3>
+                            <div class="subheading mb-3">Mason, OH</div>
+                            <p>Planned and delivered engaging chess lessons, tailored to the developmental levels and abilities of each student. Cultivated a supportive and enjoyable learning environment, aiding students in understanding chess fundamentals and enhancing their strategic thinking. Adapted lessons to suit the individual needs of each child, ensuring effective learning for all skill levels.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2024 - Present</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Babysitter</h3>
+                            <div class="subheading mb-3">Mission, TX</div>
+                            <p>Delivered attentive and reliable babysitting services for children aged 4-12, meeting individual family needs. Established positive relationships through effective communication, resulting in repeat business from several families. Maintained a high level of responsibility, ensuring the safety and happiness of children without any reported incidents.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">March 2018 - August 2023</span></div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Children's Party Entertainer</h3>
+                            <div class="subheading mb-3">Pixels Kids Entertainment, McAllen, TX</div>
+                            <p>Managed logistics, setup, performance, and teardown for events, contributing to smooth execution. Adapted performances to different age groups and themes, showcasing flexibility and versatility in entertaining diverse audiences. Collaborated with a team of entertainers to enhance the overall quality and variety of entertainment offerings. Implemented and enforced safety protocols during activities, ensuring the safety and well-being of children. Demonstrated efficient time management, consistently meeting assigned responsibilities within given timeframes.</p>
+                        </div>
+                        <div class="flex-shrink-0"><span class="text-primary">October 2022 - May 2023</span></div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Education-->
+            <section class="resume-section" id="education">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Education</h2>
+                    <div class="d-flex flex-column flex-md-row justify-content-between mb-5">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">University of Cincinnati</h3>
+                            <div class="subheading mb-3">Bachelor of Science in Computer Science</div>
+                            <p>Expected Graduation: Spring 2026</p>
+                        </div>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row justify-content-between">
+                        <div class="flex-grow-1">
+                            <h3 class="mb-0">Class Projects</h3>
+                            <div class="subheading mb-3">EV3 Robot Project - University of Cincinnati</div>
+                            <p>Collaborated within a team to conceptualize, design, and program a robot utilizing LEGO Mindstorms EV3. Utilized LabVIEW programming language to skillfully program the robot, meeting various specifications and showcasing a strong grasp of engineering principles.</p>
+                            <div class="subheading mb-3">Syllable Game - University of Texas Rio Grande Valley</div>
+                            <p>Developed a dynamic 1v1 player game through collaborative teamwork, utilizing Flask app technology. Required players to engage in creative and critical thinking to match randomized syllable counts. Showcased proficiency in Python for backend development, ensuring smooth game functionality, and demonstrated expertise in HTML/CSS to create an intuitive and visually appealing user interface. Contributed to the entire project lifecycle from conceptualization to implementation, emphasizing problem-solving and teamwork skills. Received positive feedback for the innovative and engaging nature of the game.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Skills-->
+            <section class="resume-section" id="skills">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Skills</h2>
+                    <div class="subheading mb-3">Programming Languages & Tools</div>
+                    <ul class="list-inline dev-icons">
+                        <li class="list-inline-item"><i class="fab fa-html5"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-css3-alt"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-js-square"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-python"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-java"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-react"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-node-js"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-sass"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-less"></i></li>
+                        <li class="list-inline-item"><i class="fab fa-wordpress"></i></li>
+                    </ul>
+                    <div class="subheading mb-3">Workflow</div>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Mobile-First, Responsive Design
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Browser Testing & Debugging
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Cross Functional Teams
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-check"></i></span>
+                            Agile Development & Scrum
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Interests-->
+            <section class="resume-section" id="interests">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Interests</h2>
+                    <p>Apart from being a web developer, I enjoy most of my time being outdoors. I am an avid reader of mystery novels and love to cook when I get the chance. I also engage in charity work and enjoy being part of community projects.</p>
+                </div>
+            </section>
+            <hr class="m-0" />
+            <!-- Awards-->
+            <section class="resume-section" id="awards">
+                <div class="resume-section-content">
+                    <h2 class="mb-5">Awards & Certifications</h2>
+                    <ul class="fa-ul mb-0">
+                        <li>
+                            <span class="fa-li"><i class="fas fa-trophy text-warning"></i></span>
+                            Outstanding Chess Coach - Ohio Chess Association, 2025
+                        </li>
+                        <li>
+                            <span class="fa-li"><i class="fas fa-certificate text-warning"></i></span>
+                            First Aid Certification - American Red Cross, 2023
+                        </li>
+                    </ul>
+                </div>
+            </section>
         </div>
-        <div id="main">
-          <p>A simple HTML page </p>
-          Using the <a href="https://www.w3schools.com/html"> W3Schools template</a>	
-          <hr>
-          <b>Interaction with forms</b>
-          <div> 
-            <i>Form with an HTTP GET Request</i>
-            <form action="/echo.php" method="GET">
-              Your input: <input name="data"> 
-              <input type="submit" value="Submit">
-            </form>
-          </div>
-          <div> 
-            <i>Form with an HTTP POST Request</i>
-            <form action="/echo.php" method="POST" name="echo_post">
-              Your input: 
-              <input name="data" 
-                     onkeypress="console.log('You have pressed a key')"> 
-              <input type="submit" value="Submit">
-            </form>
-          </div>
-          <div> 
-            <i>Ajax requests</i><br>
-              Your input: 
-                <input name="data" 
-                     onkeypress="console.log('You have pressed a key')" id="data"> 
-                <input class="button round" type="button" value="Ajax Echo" onclick="getEcho()">
-                <input class="button round" type="button" value="Ajax jQuery GET" onclick="jQueryAjax()">
-                <input class="button round" type="button" value="Ajax jQuery POST" onclick="jQueryAjaxPost()">
-                <input class="button round" type="button" value="guess Age" onclick="guessAge($('#data').val())">
-              <div id="response"></div>
-          </div>
-          <hr>
-          <b>Experiments with JavaScript code</b><br>
-          <i>Inlined JavaScript</i>
-          <div id="date" onclick="document.getElementById('date').innerHTML= Date()">Click here to show Date()</div>
-        </div>
-    </div>
-</div>
-<script type="text/javascript">
-    function displayTime() {
-      document.getElementById('digit-clock').innerHTML = "Current time:" + new Date();
-    }
-    setInterval(displayTime,500);
-    // code for the analog clock
-    var canvas = document.getElementById("analog-clock");
-    var ctx = canvas.getContext("2d");
-    var radius = canvas.height / 2;
-    ctx.translate(radius, radius);
-    radius = radius * 0.90
-    setInterval(drawClock, 1000);
-
-    function drawClock() {
-      drawFace(ctx, radius);
-      drawNumbers(ctx, radius);
-      drawTime(ctx, radius);
-    }
-    function getEcho() {
-        var input = document.getElementById("data").value;
-        if (input.length == 0) {
-            return;
-        }
-        var xhttp = new XMLHttpRequest();
-        xhttp.onreadystatechange = function() {
-            if (this.readyState == 4 && 
-                this.status == 200){
-                console.log("Received data="+xhttp.responseText);
-                document.getElementById("response").innerText= 
-                    "Response from server:" + xhttp.responseText;  
-                    //code to show the data
-            }
-        }
-        xhttp.open("GET", "echo.php?data="+input, true); 
-        //code to create an Ajax request
-        xhttp.send(); //code to send the request
-        document.getElementById("data").value="";
-    }
-
-    function jQueryAjax() {
-        var input = $("#data").val();
-        if (input.length == 0) {
-            return;
-        }
-        $.get("echo.php?data="+input,
-               function(result) {
-                 $("#response" ).html( "Response from server:" + result );
-               }
-        );
-        $("#data").val("");
-    }
-    function jQueryAjaxPost() {
-        var input = $("#data").val();
-        if (input.length == 0) {
-            return;
-        }
-        $.post("echo.php",
-               {data: input},
-               function( result ) {
-                 $("#response" ).html( "Response from server:" + result );
-               }
-        );
-        $("#data").val("");
-    }
-    $.get("https://v2.jokeapi.dev/joke/Programming?type=single",
-        function (result) {
-            console.log("From jokeAPI: " + JSON.stringify(result));
-            $("#response" ).html( "A programming joke of the day: " + result.joke);
-        }
-    ); //this will be executed automatically
-    //https://api.agify.io/?name=phung
-    async function guessAge(name){
-        const response = await fetch("https://api.agify.io/?name="+name);
-        const result = await response.json();
-        $("#response" ).html("Hi " + name + ", your age should be " + result.age);
-    }
-    /*
-    (async function jokeAPIfetch(){
-        const jokeAPI_res = await fetch("https://v2.jokeapi.dev/joke/Programming?type=single");
-        const result = await jokeAPI_res.json();
-        $("#response" ).html( "A programming joke of the day: " + result.joke);
-    })()*/ 
-    //jokeAPIfetch();
-    /*fetch("https://v2.jokeapi.dev/joke/Programming?type=single")
-        .then((response) => {
-            return response.json();
-    }).then(result =>{
-        $("#response" ).html( "A programming joke of the day: " + result.joke);
-
-    })*/
-</script>
-
-</body>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
 </html>
