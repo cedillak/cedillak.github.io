@@ -242,7 +242,8 @@
                     <!-- one more functionality of your choice. -->
                     
                     <!-- Two public Web APIs integration (20 pts)​ Ensure you include a disclaimer stating that the public/third-party services generate the generated contents below and that you are not responsible. -->
-                    
+                    <p>DISCLAIMER: public/third-party services generate the generated contents below. I am not responsible for the accuracy or reliability of the information provided by these services.</p>
+                    <div id= "google_translate_element"></div>   
                     <!-- Integrate the jokeAPI (https://v2.jokeapi.dev/joke/AnyLinks to an external site., similar to Lab 2.2.d.i) with Any category of joke to display a new joke in your page every 1 minute. -->
                     <li>
                         <h3 class="mb-4">A random programming joke for every minute</h3>
@@ -297,7 +298,7 @@
     });
     </script>
     <script>
-    // Replace 'your-api-key' with your actual Weatherbit API key
+    // Script for Weatherbit API 
     const apiKey = '91a95c851bdc4bc9a22ee51c37b15b2a';
     const apiUrl = `https://api.weatherbit.io/v2.0/current?key=${apiKey}`;
 
@@ -320,5 +321,14 @@
             weatherGraphicContainer.innerHTML = '<p>Failed to fetch weather data</p>';
         });
 </script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
+    <script>
+        function googleTranslateelementInit(){
+            new.google.translate.TranslateElement(
+                {pageLanguage: 'en'},
+                'google_translate_element'
+            );
+        }
+    </script>
 </body>
 </html>
