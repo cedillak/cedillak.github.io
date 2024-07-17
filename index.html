@@ -56,6 +56,8 @@
             Cincinnati, OH · (956) 391 - 7960 · <span id="email" onclick="showhideEmail()">Show my email</span>
         </div>
         <script type="text/javascript" src="js/email.js"></script>
+        <script type="text/javascript" src="js/xkcd.js"></script>
+        
         <h3 class="mb-4">WELCOME TO MY PROFESSIONAL PORTFOLIO!</h3>
         <p class="lead mb-5">Hello! I'm Ana Cedillo, a junior at the University of Cincinnati working towards a Bachelor of Science in Computer Science. I have a solid foundation in Python, HTML/CSS, and C++, along with hands-on experience using platforms like Flutter and Flask. My technical skills are enhanced by my strategic thinking, honed through my achievements as a three-time national chess champion. Fluent in both Spanish and English, I embrace cultural diversity and teamwork. If you're seeking a dedicated and hardworking Computer Science student who follows directions well and always strives to do their best, let's connect and explore how I can add value to your team!</p>
         <div class="social-icons">
@@ -297,36 +299,6 @@
         setInterval(fetchJoke, 60000); // 60000 milliseconds = 1 minute
     });
     </script>
-<!-- Script for XKCD API -->
-<script>
-    // Fetch data from XKCD API
-    fetch('https://xkcd.com/info.0.json')
-    .then(response => {
-        if (!response.ok) {
-            throw new Error('Network response was not ok');
-        }
-        return response.json();
-    })
-    .then(data => {
-        // Extract relevant data and update UI
-        const comicTitle = data.title;
-        const comicImgUrl = data.img;
-        const comicAlt = data.alt;
-
-        const xkcdComicContainer = document.getElementById('xkcd-comic-container');
-        xkcdComicContainer.innerHTML = `
-            <h3>${comicTitle}</h3>
-            <img src="${comicImgUrl}" alt="${comicAlt}">
-            <p>${comicAlt}</p>
-        `;
-    })
-    .catch(error => {
-        console.error('Error fetching XKCD comic:', error);
-        const xkcdComicContainer = document.getElementById('xkcd-comic-container');
-        xkcdComicContainer.innerHTML = '<p>Failed to fetch XKCD comic. Please check your network connection and try again.</p>';
-    });
-
-</script>
-
+    
 </body>
 </html>
