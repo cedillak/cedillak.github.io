@@ -17,6 +17,7 @@ fetch('https://xkcd.com/info.0.json')
             <h3>${comicTitle}</h3>
             <img src="${comicImgUrl}" alt="${comicAlt}">
             <p>${comicAlt}</p>
+            <p><a href="https://xkcd.com/${data.num}">View on XKCD</a></p>
         `;
     })
     .catch(error => {
