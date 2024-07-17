@@ -250,7 +250,7 @@
                         <p id="joke-of-the-day"></p>
                     </li>
                     <!-- 2. Integrate a public API with graphics and display that graphic/image in your page. -->
-                    <div id="weather-graphic-container"></div>
+                    <div id="xkcd-comic-container"></div>
                 </ul>
             </div>
         </section>
@@ -297,15 +297,10 @@
         setInterval(fetchJoke, 60000); // 60000 milliseconds = 1 minute
     });
     </script>
-<!-- Script for Weatherbit API -->
+<!-- Script for XKCD API -->
 <script>
-    const apiKey = '91a95c851bdc4bc9a22ee51c37b15b2a';
-    const lat = '39.103'; 
-    const lon = '84.512'; 
-    const apiUrl = `https://api.weatherbit.io/v2.0/current?key=${apiKey}&lat=${lat}&lon=${lon}`;
-
-    // Fetch data from Weatherbit API
-    fetch(apiUrl)
+    // Fetch data from XKCD API
+    fetch('https://xkcd.com/info.0.json')
         .then(response => {
             if (!response.ok) {
                 throw new Error('Network response was not ok');
@@ -313,23 +308,26 @@
             return response.json();
         })
         .then(data => {
-            // Example: Assuming the API returns an icon URL for weather
-            const weatherIconUrl = data.data[0].weather.icon;
-            const weatherIcon = `https://www.weatherbit.io/static/img/icons/${weatherIconUrl}.png`;
+            // Extract relevant data
+            const comicTitle = data.title;
+            const comicImgUrl = data.img;
+            const comicAlt = data.alt;
 
-            // Update the image source with the weather icon
-            const weatherGraphicContainer = document.getElementById('weather-graphic-container');
-            weatherGraphicContainer.innerHTML = `<img src="${weatherIcon}" alt="Weather Icon">`;
+            // Update the HTML to display the XKCD comic
+            const xkcdComicContainer = document.getElementById('xkcd-comic-container');
+            xkcdComicContainer.innerHTML = `
+                <h3>${comicTitle}</h3>
+                <img src="${comicImgUrl}" alt="${comicAlt}">
+                <p>${comicAlt}</p>
+            `;
         })
         .catch(error => {
-            console.error('Error fetching weather data:', error);
-            // Handle errors or display a fallback graphic
-            const weatherGraphicContainer = document.getElementById('weather-graphic-container');
-            weatherGraphicContainer.innerHTML = '<p>Failed to fetch weather data</p>';
+            console.error('Error fetching XKCD comic:', error);
+            // Handle errors or display a fallback message
+            const xkcdComicContainer = document.getElementById('xkcd-comic-container');
+            xkcdComicContainer.innerHTML = '<p>Failed to fetch XKCD comic</p>';
         });
 </script>
-
-
 
 </body>
 </html>
