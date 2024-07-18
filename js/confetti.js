@@ -1,5 +1,5 @@
-const button = document.querySelector('#button');
-const canvas = document.querySelector('#confetti');
+const button = document.querySelector('#confetti-button');
+const canvas = document.querySelector('#confetti-canvas');
 
 const jsConfetti = new JSConfetti();
 
