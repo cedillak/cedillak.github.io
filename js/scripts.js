@@ -32,3 +32,74 @@ window.addEventListener('DOMContentLoaded', event => {
     });
 
 });
+// email
+var shown = false;
+function showhideEmail(){
+	if (shown){
+      document.getElementById('email').innerText = "Show my email";
+	  shown = false;
+    }else{
+	  var myemail = document.createElement('a');
+	  myemail.href = 'mailto:cedillak@ucmail.uc.edu';
+	  myemail.innerText = 'cedillak@ucmail.uc.edu';
+      document.getElementById('email').innerHTML = '';
+      document.getElementById('email').appendChild(myemail);
+      shown = true;
+    }
+}
+// RANDOM DOG IMAGE
+function get_random_dog_image(){
+
+  url = "https://dog.ceo/api/breeds/image/random";
+
+  fetch(url)
+  .then(function(response){
+    return response.json();
+  })
+  .then(function(data){
+    display_image(data.message);
+  })
+  .catch(function(error){
+    console.log("Error: " + error);
+  });
+
+
+}
+// POKEMON
+function display_image(image_url){
+  document.getElementById("image").src = image_url;
+}
+async function fetchData(){
+
+    try{
+
+        const pokemonName = document.getElementById("pokemonName").value.toLowerCase();
+        const response = await fetch(`https://pokeapi.co/api/v2/pokemon/${pokemonName}`);
+
+        if(!response.ok){
+            throw new Error("Could not fetch resource");
+        }
+
+        const data = await response.json();
+        const pokemonSprite = data.sprites.front_default;
+        const imgElement = document.getElementById("pokemonSprite");
+
+        imgElement.src = pokemonSprite;
+        imgElement.style.display = "block";
+    }
+    catch(error){
+        console.error(error);
+    }
+}
+
+// CONFETTI
+const button = document.querySelector('#button');
+const canvas = document.querySelector('#canvas');
+
+const jsConfetti = new JSConfetti();
+
+button.addEventListener('click', () => {
+    jsConfetti.addConfetti({
+        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
+    }).then(() => jsConfetti.addConfetti())
+})
