@@ -93,13 +93,13 @@ async function fetchData(){
 }
 
 // CONFETTI
-const button = document.querySelector('#button');
-const canvas = document.querySelector('#canvas');
-
+// Assuming you have a separate script.js for your custom scripts
+const confettiButton = document.querySelector('#confetti-button');
 const jsConfetti = new JSConfetti();
 
-button.addEventListener('click', () => {
+confettiButton.addEventListener('click', () => {
     jsConfetti.addConfetti({
-        emojis: ['🌈', '⚡️', '💥', '✨', '💫', '🌸'],
-    }).then(() => jsConfetti.addConfetti())
-})
+        emojis: ['🎉', '✨', '🎊']
+    });
+});
+
