@@ -26,7 +26,7 @@ Through this project, I gained valuable experience in creating and deploying a p
 
 ## General requirements:
 ### Creating and Deploying a Personal Website:
-I created a repository on GitHub named `cedillak.github.io to` host my personal website. Using a free Bootstrap portfolio template, I replaced the placeholder content with my personal information, including my name, headshot, contact details, education background, work experience, and skills. This customized template ensured a professional and cohesive presentation tailored to potential employers. The template allowed for a clean and professional look that I believe appeals to potential employers in the computer science field.
+I created a repository on GitHub named `cedillak.github.io` to host my personal website. Using a free Bootstrap portfolio template, I replaced the placeholder content with my personal information, including my name, headshot, contact details, education background, work experience, and skills. This customized template ensured a professional and cohesive presentation tailored to potential employers. The template allowed for a clean and professional look that I believe appeals to potential employers in the computer science field.
 
 ### Adding a Link to the WAPH Course:
 I added a new HTML page, waph.html, which provides an overview of the "Web Application Programming and Hacking" course. I linked this page from the main website using the following code:
