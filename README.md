@@ -44,16 +44,17 @@ This snippet includes a header and an image link from Flag Counter, which displa
 
 ## Technical requirements
 ### JavaScript code:
-1. **Digital Clock:** I implemented a digital clock using JavaScript that displays the current time and updates every second. This involved creating a function to get the current time, format it as a string, and update the HTML element's content with this string every second using `setInterval`.
-2. **Analog Clock:** For the analog clock, I used JavaScript to create a clock face with moving hands. This involved calculating the rotation angles for the hour, minute, and second hands based on the current time and updating the CSS transform property of these elements every second.
-3. **Show/Hide Email:** I added a JavaScript function to toggle the visibility of my email address. This function changes the display property of the HTML element containing the email between 'none' and 'block' when a button is clicked.
-4. **Confetti Animation:** To add a playful element, I incorporated the JS Confetti library. I created a button and attached an event listener to it. When the button is clicked, the library's `addConfetti` method is called, which triggers a confetti animation on the page.
+1. **Digital Clock:** I implemented a digital clock using JavaScript that displays the current time. The digital clock function updates the inner HTML of an element with the ID `digit-clock` to show the current date and time. This function is called every 500 milliseconds using `setInterval`, ensuring the displayed time remains current.
+2. **Analog Clock:** For the analog clock, I used JavaScript to create a clock face with moving hands. The analog clock is drawn on a canvas element. The code first sets up the canvas context and adjusts the center of the clock. It then periodically calls the `drawClock` function every second to update the clock’s face, numbers, and hands.
+3. **Show/Hide Email:** This feature toggles the visibility of an email address. Initially, the email is hidden. When the user clicks a button, the `showhideEmail` function either shows or hides the email address by modifying the inner HTML of the `email` element and updating its content accordingly.
+4. **Confetti Animation:** To add a playful element, I incorporated the JS Confetti library. The confetti effect is triggered by clicking a button. The button has an event listener that calls the `addConfetti` method of the JSConfetti library, which generates a confetti animation using specified emojis.
 
 ### Integrate the jokeAP:
-I integrated the JokeAPI to fetch a new programming joke every minute. I used jQuery to make an AJAX GET request to the API endpoint and update the HTML content with the joke. This process is repeated every 60 seconds using `setInterval`.
+I integrated the JokeAPI to fetch a new programming joke every minute. The code uses jQuery to fetch a joke from the JokeAPI every 60 seconds. The `fetchJoke` function makes a GET request to the API and updates the HTML of an element with the ID `joke-of-the-day` to display the joke. This ensures that the joke updates automatically at regular intervals.
+
 
 ### Integrate public API with graphics:
-1. **Random Dog Image API:** I used the Dog CEO's Dog API to fetch and display a random dog image. I created a function that makes a fetch request to the API, processes the JSON response, and updates the `src` attribute of an HTML `img` element with the image URL.
+1. **Random Dog Image API:** I used the Dog CEO's Dog API to fetch and display a random dog image. The fetch function makes a request to the API, retrieves the image URL, and then calls `display_image` to set the `src` attribute of an `img` element to this URL, displaying the image on the page.
 2. **Pokémon Image API:** As a bonus, I implemented functionality to fetch and display a Pokémon image based on user input. I used the PokeAPI to get data for a Pokémon specified by the user. The fetch request is made when the user submits the Pokémon name, and the image URL from the response is used to update the `src` attribute of an HTML `img` element.
 
 ### Use JavaScript cookies to remember the client:
