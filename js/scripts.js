@@ -103,3 +103,44 @@ confettiButton.addEventListener('click', () => {
     });
 });
 
+// Function to get a cookie by name
+function getCookie(cname) {
+  let name = cname + "=";
+  let decodedCookie = decodeURIComponent(document.cookie);
+  let ca = decodedCookie.split(';');
+  for(let i = 0; i < ca.length; i++) {
+    let c = ca[i];
+    while (c.charAt(0) == ' ') {
+      c = c.substring(1);
+    }
+    if (c.indexOf(name) == 0) {
+      return c.substring(name.length, c.length);
+    }
+  }
+  return "";
+}
+
+// Function to set a cookie
+function setCookie(cname, cvalue, exdays) {
+  const d = new Date();
+  d.setTime(d.getTime() + (exdays * 24 * 60 * 60 * 1000));
+  let expires = "expires=" + d.toUTCString();
+  document.cookie = cname + "=" + cvalue + ";" + expires + ";path=/";
+}
+
+// Function to check the user's visit and display appropriate message
+function checkVisit() {
+  let lastVisit = getCookie("lastVisit");
+  if (lastVisit == "") {
+    alert("Welcome to my homepage!");
+    let currentVisit = new Date().toString();
+    setCookie("lastVisit", currentVisit, 365); // Set the last visit date to expire in 1 year
+  } else {
+    alert("Welcome back! Your last visit was " + lastVisit);
+    let currentVisit = new Date().toString();
+    setCookie("lastVisit", currentVisit, 365); // Update the last visit date
+  }
+}
+
+// Run the checkVisit function when the window loads
+window.onload = checkVisit;
