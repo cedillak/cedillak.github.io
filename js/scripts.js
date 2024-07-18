@@ -132,7 +132,7 @@ function setCookie(cname, cvalue, exdays) {
 function checkVisit() {
   let lastVisit = getCookie("lastVisit");
   if (lastVisit == "") {
-    alert("Welcome to my homepage!");
+    alert("Welcome to my website!");
     let currentVisit = new Date().toString();
     setCookie("lastVisit", currentVisit, 365); // Set the last visit date to expire in 1 year
   } else {
